@@ -1,0 +1,27 @@
+colomerka-front/
+└── src/
+    ├── app/                  # ENRUTAMIENTO (App Router) y Páginas de la App
+    │   ├── layout.tsx        # Estructura global (Navbar, Footer compartidos)
+    │   ├── page.tsx          # Página de inicio del Marketplace (Home)
+    │   ├── auth/
+    │   │   └── register/
+    │   │       └── page.tsx  # Vista de Registro Corporativo (Onboarding Empresa)
+    │   └── products/
+    │       └── page.tsx      # Vista de Catálogo de Productos
+    │
+    ├── components/           # COMPONENTES VISUALES REUTILIZABLES (Átomos/Moléculas)
+    │   ├── ui/               # Botones, inputs, tarjetas genéricas
+    │   │   ├── button.tsx
+    │   │   └── input.tsx
+    │   └── shared/           # Componentes grandes compartidos
+    │       ├── navbar.tsx
+    │       └── product-card.tsx
+    │
+    ├── services/             # CAPA DE DATOS (Conexión directa con la API del Backend)
+    │   ├── api.ts            # Configuración base de Fetch / Axios
+    │   ├── auth.service.ts   # Peticiones de login y registro
+    │   └── product.service.ts# Peticiones para listar y crear productos
+    │
+    └── hooks/                # LOGICA DE ESTADO (Custom Hooks para separar lógica de la vista)
+        ├── useAuth.ts
+        └── useProducts.ts
